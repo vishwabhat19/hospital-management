@@ -9,6 +9,7 @@ To start the application, simply use:
 ```sh
 mvn spring-boot:run
 ```
+Currently due to some issues with maven on my machine and some dependency issues i could not run it using this command. But clicking on run/debug on ManagementApplication runs the application fine. I will fix it soon.
 
 ---
 ## 📜 API Documentation (Swagger)
