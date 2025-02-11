@@ -1,0 +1,4 @@
+<broker xmlns="http://activemq.apache.org/schema/artemis/core/1.0">
+    <core xmlns="urn:activemq:core:3.0">
+        <journal-type>NIO</journal-type>  </core>
+</broker>
