@@ -9,7 +9,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Schema(description = "Request DTO for creating or deleting a group")
-@AllArgsConstructor
 public class GroupRequestDTO {
 
     @NotNull(message = "Group ID is required")
@@ -30,4 +29,52 @@ public class GroupRequestDTO {
     @NotNull(message = "Operation is required")
     @Schema(description = "Operation type (CREATE or DELETE)", example = "DELETE", allowableValues = {"CREATE", "DELETE"}, required = true)
     private String operation;
+
+    public GroupRequestDTO(String groupId, String parentGroupId, String groupName, String timestamp, String operation) {
+        this.groupId = groupId;
+        this.parentGroupId = parentGroupId;
+        this.groupName = groupName;
+        this.timestamp = timestamp;
+        this.operation = operation;
+    }
+
+    public @NotNull(message = "Group ID is required") String getGroupId() {
+        return groupId;
+    }
+
+    public @NotNull(message = "Parent Group ID is required") String getParentGroupId() {
+        return parentGroupId;
+    }
+
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public @NotNull(message = "Timestamp is required") String getTimestamp() {
+        return timestamp;
+    }
+
+    public @NotNull(message = "Operation is required") String getOperation() {
+        return operation;
+    }
+
+    public void setGroupId(@NotNull(message = "Group ID is required") String groupId) {
+        this.groupId = groupId;
+    }
+
+    public void setParentGroupId(@NotNull(message = "Parent Group ID is required") String parentGroupId) {
+        this.parentGroupId = parentGroupId;
+    }
+
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
+    }
+
+    public void setTimestamp(@NotNull(message = "Timestamp is required") String timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public void setOperation(@NotNull(message = "Operation is required") String operation) {
+        this.operation = operation;
+    }
 }

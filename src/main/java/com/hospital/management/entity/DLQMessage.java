@@ -20,4 +20,37 @@ public class DLQMessage {
     private String messageContent;
 
     private LocalDateTime timestamp;
+
+    public DLQMessage() {
+    }
+
+    public DLQMessage(String messageContent, LocalDateTime timestamp) {
+        this.id = id;
+        this.messageContent = messageContent;
+        this.timestamp = timestamp;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getMessageContent() {
+        return messageContent;
+    }
+
+    public void setMessageContent(String messageContent) {
+        this.messageContent = messageContent;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
+    }
 }

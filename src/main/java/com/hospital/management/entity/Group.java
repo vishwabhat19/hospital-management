@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
 public class Group {
 
     @Id
@@ -36,6 +35,49 @@ public class Group {
         this.groupId = groupId;
         this.parentGroupId = parentGroupId;
         this.groupName = groupName;
+        this.createdTimestamp = createdTimestamp;
+    }
+
+    public Group() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
+
+    public String getParentGroupId() {
+        return parentGroupId;
+    }
+
+    public void setParentGroupId(String parentGroupId) {
+        this.parentGroupId = parentGroupId;
+    }
+
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
+    }
+
+    public LocalDateTime getCreatedTimestamp() {
+        return createdTimestamp;
+    }
+
+    public void setCreatedTimestamp(LocalDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
     }
 }

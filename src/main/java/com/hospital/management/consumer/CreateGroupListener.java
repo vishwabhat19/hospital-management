@@ -1,7 +1,6 @@
 package com.hospital.management.consumer;
 
 import com.hospital.management.service.GroupService;
-import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

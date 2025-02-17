@@ -30,6 +30,7 @@ public class JMSConfiguration {
 
         // Sets the concurrency level for JMS listeners, allowing 3 to 10 concurrent consumers
         factory.setConcurrency("3-10");
+        factory.setAutoStartup(false);
 
         // Enables session transactions to ensure message processing reliability
         factory.setSessionTransacted(true);
